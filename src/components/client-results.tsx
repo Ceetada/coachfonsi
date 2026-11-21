@@ -6,16 +6,24 @@ const resultImageSizes = "(max-width: 699px) 45vw, (max-width: 84rem) 24vw, 19re
 function TransformationCard({ entry }: { entry: Transformation }) {
   return (
     <article className="transformation" data-reveal="card">
-      {entry.video ? <MediaFrame asset={entry.video} className="result-media result-video" autoplayLoop /> : null}
+      {entry.video ? (
+        <figure className="result-media result-video">
+          <MediaFrame asset={entry.video} className="result-frame" autoplayLoop />
+          <figcaption className="result-video-labels">
+            <span className="result-label">Before</span>
+            <span className="result-label">After</span>
+          </figcaption>
+        </figure>
+      ) : null}
       {!entry.video || entry.before || entry.after ? (
         <div className="result-media result-pair">
           <figure>
             <MediaFrame asset={entry.before} className="result-frame" sizes={resultImageSizes} autoplayLoop />
-            <figcaption>Before</figcaption>
+            <figcaption className="result-label">Before</figcaption>
           </figure>
           <figure>
             <MediaFrame asset={entry.after} className="result-frame after-frame" sizes={resultImageSizes} autoplayLoop />
-            <figcaption>After</figcaption>
+            <figcaption className="result-label">After</figcaption>
           </figure>
         </div>
       ) : null}
