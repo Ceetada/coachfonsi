@@ -43,6 +43,10 @@ export function Footer({ chat, email }: { chat: string | null; email: string | n
           <a href="#top">Back to top <ArrowUp size={14} aria-hidden="true" /></a>
         </div>
       </div>
+      <div className="mobile-contact-bar">
+        <p><strong>Questions?</strong><span>I reply personally</span></p>
+        <ContactLink href={chat ?? email} className="button-primary">Chat with me</ContactLink>
+      </div>
       {chat ? <a className="floating-contact icon-button" href={chat} target="_blank" rel="noopener noreferrer" aria-label="Chat with Coach Fonsi on WhatsApp"><WhatsAppMark size={22} /></a> : null}
     </footer>
   );
