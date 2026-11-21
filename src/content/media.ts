@@ -65,7 +65,19 @@ export const media: {
       },
       video: null,
     },
-    { id: "client-02", before: null, after: null, video: null },
+    {
+      id: "client-02",
+      before: null,
+      after: null,
+      video: {
+        sources: [{ src: "/media/transformations/client-02.mp4", type: "video/mp4" }],
+        label: "Client progress video collage",
+        poster: {
+          src: "/media/transformations/client-02-poster.webp",
+          alt: "Still from the client progress video collage",
+        },
+      },
+    },
     { id: "client-03", before: null, after: null, video: null },
     { id: "client-04", before: null, after: null, video: null },
     { id: "client-05", before: null, after: null, video: null },

@@ -138,14 +138,24 @@ a.button-primary:hover { background: var(--accent-hover); }
 figcaption { padding-top: .55rem; color: var(--muted); font-size: .86rem; font-weight: 600; }
 
 .results-grid, .plan-grid, .guides-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(.85rem, 2vw, 1.5rem); }
-.results-grid { row-gap: clamp(1.2rem, 3vw, 2rem); }
+.results-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .transformation { min-width: 0; }
-.result-pair { gap: .2rem; }
-.result-frame { aspect-ratio: 4 / 5; }
-.result-pair figure:first-child .media-frame { border-radius: var(--curve) 0 0 var(--curve); }
-.result-pair figure:last-child .media-frame { border-radius: 0 var(--curve) var(--curve) 0; }
+.result-media { aspect-ratio: 1; overflow: hidden; border-radius: var(--curve); }
+.result-pair { gap: 0; }
+.result-pair figure { position: relative; min-width: 0; }
+.result-frame { height: 100%; }
+.result-pair figcaption {
+  position: absolute;
+  inset: clamp(.25rem, 1vw, .9rem) auto auto clamp(.25rem, 1vw, .9rem);
+  padding: .15rem clamp(.3rem, .75vw, .6rem);
+  border-radius: 1rem;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-size: clamp(.65rem, 1.35vw, .85rem);
+  line-height: 1.4;
+}
 .result-frame.after-frame { background: var(--surface-accent); }
-.result-video { aspect-ratio: 9 / 16; max-height: 36rem; border-radius: var(--curve); }
+.result-video { background: var(--page); }
 .result-video + .result-pair { margin-top: .8rem; }
 .transformation :is(h3, p, blockquote) { margin-top: .65rem; overflow-wrap: anywhere; }
 .transformation blockquote { color: var(--accent); }
@@ -312,8 +322,6 @@ figcaption { padding-top: .55rem; color: var(--muted); font-size: .86rem; font-w
   .about-copy { order: -1; }
   .about-frame { aspect-ratio: 5 / 4; }
   .contact-frame { aspect-ratio: 5 / 3.7; }
-  .results-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .result-frame { aspect-ratio: 3 / 4; }
   .carousel-track { --slide: 72%; }
   .plan-grid { grid-template-columns: 1fr; }
   .plans-field .plan-grid { gap: 1.25rem; margin-top: -.35rem; }
@@ -337,8 +345,6 @@ figcaption { padding-top: .55rem; color: var(--muted); font-size: .86rem; font-w
   .hero-actions { display: grid; gap: .5rem; max-width: 22rem; }
   .hero-actions .button { justify-content: space-between; }
   .hero-actions .button-whatsapp { justify-content: center; }
-  .results-grid { grid-template-columns: 1fr; }
-  .result-frame { aspect-ratio: 4 / 4.5; }
 }
 @media (prefers-reduced-motion: no-preference) {
   .hero-line { display: inline-block; animation: text-arrive var(--motion-reveal) var(--ease-out) backwards; }

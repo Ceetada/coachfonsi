@@ -4,15 +4,15 @@ import { MediaFrame } from "./media-frame";
 function TransformationCard({ entry }: { entry: Transformation }) {
   return (
     <article className="transformation" data-reveal="card">
-      {entry.video ? <MediaFrame asset={entry.video} className="result-video" contain /> : null}
+      {entry.video ? <MediaFrame asset={entry.video} className="result-media result-video" /> : null}
       {!entry.video || entry.before || entry.after ? (
-        <div className="result-pair">
+        <div className="result-media result-pair">
           <figure>
-            <MediaFrame asset={entry.before} className="result-frame" sizes="(max-width: 699px) 44vw, 18vw" />
+            <MediaFrame asset={entry.before} className="result-frame" sizes="(max-width: 84rem) 24vw, 19rem" />
             <figcaption>Before</figcaption>
           </figure>
           <figure>
-            <MediaFrame asset={entry.after} className="result-frame after-frame" sizes="(max-width: 699px) 44vw, 18vw" />
+            <MediaFrame asset={entry.after} className="result-frame after-frame" sizes="(max-width: 84rem) 24vw, 19rem" />
             <figcaption>After</figcaption>
           </figure>
         </div>
