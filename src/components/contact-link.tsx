@@ -33,5 +33,5 @@ export function ContactLink({
     );
   }
 
-  return <span className={`${classes} button-unavailable`}>{icon} Contact coming soon</span>;
+  return <span className={`${classes} button-unavailable`}>{icon}{children}</span>;
 }

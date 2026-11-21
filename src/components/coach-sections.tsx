@@ -73,7 +73,7 @@ export function FinalContact({ chat, email }: { chat: string | null; email: stri
         <div>
           <h2 id="contact-title">{site.closing.headline}</h2>
           <p className="lede">{site.closing.description}</p>
-          <ContactLink href={chat ?? email} fallback={null} className="button-primary">{chat || !email ? "Chat With Coach Fonsi" : "Email Coach Fonsi"}</ContactLink>
+          <ContactLink href={chat ?? email} fallback={null} className="button-primary">{chat || !email ? "Contact me on WhatsApp" : "Email Coach Fonsi"}</ContactLink>
         </div>
         <MediaFrame className="contact-frame" asset={media.finalPortrait} sizes="(max-width: 699px) 82vw, 34vw" />
       </div>
