@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#000"/>
+  <path d="M862 0h218a120 120 0 0 1 120 120v510H862z" fill="#202020"/>
+  <g transform="translate(82 78)">
+    <rect width="64" height="64" rx="13" fill="#fff"/>
+    <path d="M29 19a14 14 0 1 0 0 26M35 46V18h15M35 31h12" fill="none" stroke="#080808" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="77" y="332" fill="#f7f7f7" font-family="Georgia,serif" font-size="110" letter-spacing="-5">Coach Fonsi</text>
+  <text x="83" y="410" fill="#bdbdbd" font-family="Arial,sans-serif" font-size="34">Personal weight-loss &amp; strength coaching</text>
+</svg>

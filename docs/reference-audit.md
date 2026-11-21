@@ -1,0 +1,5 @@
+# Reference audit
+
+The desktop reference opens with a compact wordmark, anchor navigation, and two actions under a large serif headline. A portrait-led story introduces the coach before paired progress images, client videos, a WhatsApp screenshot carousel, three tier cards with three durations each, digital guides, a personal closing invitation, and social links. The plan links proceed directly to a prefilled WhatsApp inquiry. On mobile, the headline and actions stack, the header anchors disappear, and a persistent contact bar occupies the bottom edge.
+
+Coach Fonsi keeps that section order, compact header, serif-and-sans hierarchy, purple accent, and direct inquiry path. A warm ivory canvas, split hero with a dedicated portrait frame, and a dark plum closing section establish a distinct identity. The mobile menu retains section navigation. Native video controls, a keyboard-operable carousel and modal, and a single duration selector improve interaction. The floating action appears after contact setup and leaves room for footer content. Every media frame reserves its layout, while pricing, testimonials, and claims depend on approved content.
