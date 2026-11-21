@@ -1,6 +1,8 @@
 import { media, type Transformation } from "@/content/media";
 import { MediaFrame } from "./media-frame";
 
+const resultImageSizes = "(max-width: 699px) 45vw, (max-width: 84rem) 24vw, 19rem";
+
 function TransformationCard({ entry }: { entry: Transformation }) {
   return (
     <article className="transformation" data-reveal="card">
@@ -8,11 +10,11 @@ function TransformationCard({ entry }: { entry: Transformation }) {
       {!entry.video || entry.before || entry.after ? (
         <div className="result-media result-pair">
           <figure>
-            <MediaFrame asset={entry.before} className="result-frame" sizes="(max-width: 84rem) 24vw, 19rem" />
+            <MediaFrame asset={entry.before} className="result-frame" sizes={resultImageSizes} />
             <figcaption>Before</figcaption>
           </figure>
           <figure>
-            <MediaFrame asset={entry.after} className="result-frame after-frame" sizes="(max-width: 84rem) 24vw, 19rem" />
+            <MediaFrame asset={entry.after} className="result-frame after-frame" sizes={resultImageSizes} />
             <figcaption>After</figcaption>
           </figure>
         </div>
