@@ -42,7 +42,7 @@ export function Header({ chat }: { chat: string | null }) {
             <a key={href} href={href} aria-current={hash === href ? "location" : undefined}>{label}</a>
           ))}
         </nav>
-        <ContactLink href={chat} className="header-cta button-primary" icon="arrow">Chat with Coach Fonsi</ContactLink>
+        <ContactLink href={chat} className="header-cta button-primary">Chat with Coach Fonsi</ContactLink>
         <button ref={toggle} type="button" className="menu-toggle icon-button" aria-label="Open navigation" aria-expanded={open} aria-controls="mobile-menu" onClick={openMenu}><Menu aria-hidden="true" /></button>
       </div>
       <dialog id="mobile-menu" ref={menu} className="mobile-menu" aria-label="Navigation" onClose={() => { setOpen(false); toggle.current?.focus({ preventScroll: true }); }}>

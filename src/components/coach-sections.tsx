@@ -16,7 +16,7 @@ export function Hero({ chat }: { chat: string | null }) {
         <p className="lede">{site.hero.description}</p>
         <div className="hero-actions">
           <a href="#plans" className="button button-primary">Explore Coaching Plans <ArrowRight size={17} aria-hidden="true" /></a>
-          <ContactLink href={chat} className="button-outline button-whatsapp" icon="whatsapp">Chat on WhatsApp</ContactLink>
+          <ContactLink href={chat} className="button-outline button-whatsapp">Chat on WhatsApp</ContactLink>
         </div>
         <a className="text-link" href="#results">See Client Results <ArrowDown size={15} aria-hidden="true" /></a>
       </div>

@@ -1,7 +1,7 @@
-import { ArrowUpRight, MessageCircle } from "lucide-react";
-import { site } from "@/content/site";
+import { ArrowUp, ArrowUpRight } from "lucide-react";
+import { navigation, site } from "@/content/site";
 import { httpsUrl } from "@/lib/links";
-import { Brand } from "./brand";
+import { ContactLink, WhatsAppMark } from "./contact-link";
 
 export function Footer({ chat, email }: { chat: string | null; email: string | null }) {
   const socials = site.social.flatMap(({ label, url }) => {
@@ -11,16 +11,28 @@ export function Footer({ chat, email }: { chat: string | null; email: string | n
   return (
     <footer className="site-footer">
       <div className="wrap">
-        <div className="footer-main">
-          <div><Brand /><p>{site.tagline}</p></div>
-          {socials.length || chat || email ? (
-            <div className="footer-socials" aria-label="Contact and social links">
-              {socials.map(({ label, href }) => <a key={label} href={href} target="_blank" rel="noopener noreferrer">{label}<ArrowUpRight size={14} aria-hidden="true" /></a>)}
-              {chat ? <a href={chat} target="_blank" rel="noopener noreferrer">WhatsApp<ArrowUpRight size={14} aria-hidden="true" /></a> : null}
+        <div className="footer-panel">
+          <div className="footer-main">
+            <div className="footer-identity">
+              <a href="#top">{site.name}</a>
+              <p>{site.tagline}</p>
+            </div>
+            <nav className="footer-links" aria-label="Explore Coach Fonsi">
+              {navigation.map(({ label, href }) => <a key={href} href={href}>{label}</a>)}
+            </nav>
+            {socials.length > 0 ? (
+              <nav className="footer-links" aria-label="Social media">
+                {socials.map(({ label, href }) => <a key={label} href={href} target="_blank" rel="noopener noreferrer">{label}<ArrowUpRight size={14} aria-hidden="true" /></a>)}
+              </nav>
+            ) : null}
+            <div className="footer-contact">
+              <ContactLink href={chat} className="footer-cta">
+                {chat ? "Chat on WhatsApp" : "Get in touch"}
+              </ContactLink>
               {email ? <a href={email}>Email</a> : null}
             </div>
-          ) : null}
-          <a className="text-link back-top" href="#top">Back to top <ArrowUpRight size={15} aria-hidden="true" /></a>
+          </div>
+          <div className="footer-wordmark" aria-hidden="true">FONSI</div>
         </div>
         <div className="footer-bottom">
           <small>© {new Date().getFullYear()} {site.name}</small>
@@ -28,9 +40,10 @@ export function Footer({ chat, email }: { chat: string | null; email: string | n
             <a href="/privacy">Privacy Policy</a>
             <a href="/terms">Terms</a>
           </nav>
+          <a href="#top">Back to top <ArrowUp size={14} aria-hidden="true" /></a>
         </div>
       </div>
-      {chat ? <a className="floating-contact icon-button" href={chat} target="_blank" rel="noopener noreferrer" aria-label="Chat with Coach Fonsi on WhatsApp"><MessageCircle aria-hidden="true" /></a> : null}
+      {chat ? <a className="floating-contact icon-button" href={chat} target="_blank" rel="noopener noreferrer" aria-label="Chat with Coach Fonsi on WhatsApp"><WhatsAppMark size={22} /></a> : null}
     </footer>
   );
 }

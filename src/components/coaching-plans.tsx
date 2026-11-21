@@ -1,8 +1,8 @@
-import { Check, ChevronRight } from "lucide-react";
+import { Check } from "lucide-react";
 import { durations, type CoachingPlan } from "@/content/plans";
 import { durationLabel, planMessage, whatsappLink } from "@/lib/links";
 import { formatNaira, isPrice, savings } from "@/lib/pricing";
-import { ContactLink } from "./contact-link";
+import { ContactLink, WhatsAppMark } from "./contact-link";
 
 function PlanRates({ plan, prices, phone }: {
   plan: CoachingPlan;
@@ -32,7 +32,7 @@ function PlanRates({ plan, prices, phone }: {
               </span>
               <span className="plan-term-total">
                 <span className={isPrice(price) ? "plan-price" : "plan-savings"}>{isPrice(price) ? formatNaira(price) : "Enquire for pricing"}</span>
-                <ChevronRight size={16} aria-hidden="true" />
+                <WhatsAppMark size={16} />
               </span>
             </a>
           </li>
