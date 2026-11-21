@@ -18,6 +18,7 @@ export function Hero({ chat }: { chat: string | null }) {
           <ContactLink href={chat} className="button-outline button-whatsapp">Chat on WhatsApp</ContactLink>
         </div>
         <a className="text-link" href="#results">See Client Results <ArrowDown size={15} aria-hidden="true" /></a>
+        <p className="hero-rating"><span aria-hidden="true">★★★★★</span> Rated 4.9 by my clients</p>
       </div>
       {media.heroVideo ? <HeroVideo asset={media.heroVideo} /> : (
         <MediaFrame className="hero-frame" asset={media.heroPortrait} sizes="(max-width: 799px) 92vw, 44vw" priority />
