@@ -51,7 +51,20 @@ export const media: {
   afterPortrait: null,
   finalPortrait: null,
   clientTransformations: [
-    { id: "client-01", before: null, after: null, video: null },
+    {
+      id: "client-01",
+      before: {
+        src: "/media/transformations/client-01-before.webp",
+        alt: "Client posing in glasses and a patterned outfit",
+        position: "50% 60%",
+      },
+      after: {
+        src: "/media/transformations/client-01-after.webp",
+        alt: "Client in blue workout clothes reaching overhead while balancing on one leg",
+        position: "50% 12%",
+      },
+      video: null,
+    },
     { id: "client-02", before: null, after: null, video: null },
     { id: "client-03", before: null, after: null, video: null },
     { id: "client-04", before: null, after: null, video: null },
