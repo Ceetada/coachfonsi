@@ -100,7 +100,16 @@ a.button-primary:hover { background: var(--accent-hover); }
 .hero-copy { min-width: 0; }
 .hero h1 { margin: .9rem 0 1.4rem; text-wrap: initial; }
 .hero h1 em { display: inline-block; font-size: .84em; line-height: 1.12; color: #dedede; }
-.hero-intro { font-weight: 700; font-size: 1.06rem; margin-bottom: .35rem; }
+.hero-intro {
+  display: flex; align-items: center; gap: .7rem;
+  font: italic 500 clamp(1.25rem, 2.2vw, 1.65rem)/1.2 var(--font-display), Georgia, serif;
+}
+.hero-intro-mark {
+  display: grid; place-items: center; flex: none;
+  width: 2.5rem; aspect-ratio: 1; border-radius: 50%;
+  background: var(--accent); color: var(--accent-ink);
+  font: 650 1.25rem/1 var(--font-display), Georgia, serif;
+}
 .hero .lede { max-width: 29rem; }
 .faq-answer a { color: var(--ink); text-decoration: underline; text-underline-offset: .2em; }
 .faq-answer a:hover { color: var(--accent-hover); }

@@ -4,9 +4,9 @@ export const site = {
   name: "Coach Fonsi",
   tagline: "Personal weight-loss & strength coaching",
   hero: {
-    headline: ["Aim for 6–12 kg.", "Start with 60 days."] as const,
-    introduction: "I’m Coach Fonsi.",
-    description: "We’ll use your first 60 days to build a strength and nutrition routine that fits your life and moves you toward your weight-loss goal.",
+    headline: ["Aim for 6–12\u00a0kg.", "Start with 60 days."] as const,
+    introduction: "Hey, I’m Coach Fonsi.",
+    description: "I’ll help you build strength and work toward your weight-loss goal with workouts that fit your week and nutrition changes built around the meals you already enjoy.",
   },
   about: {
     heading: "Meet Coach Fonsi",

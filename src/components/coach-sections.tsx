@@ -10,9 +10,8 @@ export function Hero({ chat }: { chat: string | null }) {
   return (
     <section className="hero wrap" aria-labelledby="hero-title">
       <div className="hero-copy">
-        <p className="eyebrow">{site.tagline}</p>
+        <p className="hero-intro"><span className="hero-intro-mark" aria-hidden="true">F</span>{site.hero.introduction}</p>
         <h1 id="hero-title"><span className="hero-line">{first}</span><br /><em className="hero-line">{second}</em></h1>
-        <p className="hero-intro">{site.hero.introduction}</p>
         <p className="lede">{site.hero.description}</p>
         <div className="hero-actions">
           <a href="#plans" className="button button-primary">Explore Coaching Plans <ArrowRight size={17} aria-hidden="true" /></a>
