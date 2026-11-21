@@ -115,12 +115,14 @@ a.button-primary:hover { background: var(--accent-hover); }
 .hero-frame { aspect-ratio: 4 / 4.55; background: var(--surface); border-radius: var(--curve); }
 .hero-video { isolation: isolate; }
 .hero-video video { filter: grayscale(1); }
-.hero-video::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: #000; opacity: .45; }
-@media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
-  .hero-video video { transition: transform 420ms var(--ease-out); }
-  .hero-video::after { transition: opacity 340ms ease; }
-  .hero-video:hover video { transform: scale(1.05); }
-  .hero-video:hover::after { opacity: .23; }
+.hero-video::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: #000; opacity: .55; }
+@media (hover: hover) and (pointer: fine) {
+  .hero-video:hover::after { opacity: .14; }
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-video video { transition: transform 320ms var(--ease-out); }
+    .hero-video::after { transition: opacity 320ms ease; }
+    .hero-video:hover video { transform: scale(1.07); }
+  }
 }
 .about-field { padding-bottom: calc(var(--section) * .52); border-top: 1px solid var(--line); }
 .about-grid { display: grid; grid-template-columns: minmax(0, .83fr) minmax(0, 1fr); align-items: center; gap: clamp(2rem, 9vw, 9rem); }
