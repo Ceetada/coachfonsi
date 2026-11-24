@@ -47,8 +47,16 @@ export const media: {
     position: "50% 68%",
   },
   aboutPortrait: null,
-  beforePortrait: null,
-  afterPortrait: null,
+  beforePortrait: {
+    src: "/media/coach/fonsi-journey-before.webp",
+    alt: "Coach Fonsi in a red shirt holding a cup indoors",
+    position: "50% 75%",
+  },
+  afterPortrait: {
+    src: "/media/coach/fonsi-journey-after.webp",
+    alt: "Coach Fonsi in a pink shirt and headphones beside a tree",
+    position: "50% 100%",
+  },
   finalPortrait: null,
   clientTransformations: [
     {
