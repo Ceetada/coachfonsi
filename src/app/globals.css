@@ -139,6 +139,13 @@ a.button-primary:hover { background: var(--accent-hover); }
 .about-grid { display: grid; grid-template-columns: minmax(0, .83fr) minmax(0, 1fr); align-items: center; gap: clamp(2rem, 9vw, 9rem); }
 .about-frame { aspect-ratio: 4 / 4.4; border-radius: var(--curve); }
 .about-copy p { max-width: 34rem; margin-top: 1rem; }
+.about-copy .about-signature { margin-top: 1.4rem; }
+.about-signature-mark {
+  display: block; color: var(--accent);
+  font: italic 500 clamp(2.1rem, 4vw, 3rem)/1.05 var(--font-display), Georgia, serif;
+  letter-spacing: -.055em;
+}
+.about-signature-name { display: block; margin-top: .45rem; color: var(--muted); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }
 .section-lead { font-size: clamp(1.2rem, 2.2vw, 1.6rem); font-weight: 550; line-height: 1.35; color: var(--accent); }
 .about-field + .journey-field { padding-top: calc(var(--section) * .52); border-top: 0; }
 .journey-grid { display: grid; grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr); align-items: center; gap: clamp(1.6rem, 7vw, 6rem); }

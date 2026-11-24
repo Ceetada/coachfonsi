@@ -37,6 +37,10 @@ export function CoachIntroduction() {
           <p className="section-lead">{site.about.lead}</p>
           {site.about.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           {site.about.biography ? <p>{site.about.biography}</p> : null}
+          <p className="about-signature">
+            <span className="about-signature-mark">{site.about.signature.name}</span>
+            <span className="about-signature-name">{site.about.signature.fullName}</span>
+          </p>
         </div>
       </div>
     </section>

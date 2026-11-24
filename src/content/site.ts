@@ -10,13 +10,14 @@ export const site = {
   },
   about: {
     heading: "When the work doesn’t show.",
-    lead: "If you’ve been putting in the effort and still wonder whether it’s working, I get it.",
+    lead: "Putting in the work and still feeling stuck? I get it.",
     paragraphs: [
-      "I’ll build your workouts around the time and equipment you actually have. With food, we’ll start with the meals you already enjoy and find changes you can stick with on a busy week.",
-      "We’ll look for progress you can feel, too. Maybe it’s lifting a little heavier or getting through a workout that used to wipe you out. Those wins count.",
+      "I’ll build workouts around your schedule and equipment, with nutrition changes that fit the meals you already enjoy.",
+      "We’ll look for progress you can feel, like lifting a little heavier or finishing a workout that used to wipe you out.",
     ],
     // Replace with approved biographical copy when supplied.
     biography: null as string | null,
+    signature: { name: "Fonsi", fullName: "Sifon Etim" },
   },
   closing: {
     headline: "Let’s plan your first month.",
