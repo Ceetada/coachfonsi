@@ -19,8 +19,9 @@ function PlanRates({ plan, prices, phone }: {
     <ul className="plan-terms" aria-label={`${plan.title} rates`}>
       {durations.map((duration) => {
         const price = prices[duration];
+        const displayedPrice = isPrice(price) ? formatNaira(price) : null;
         const discount = plan.showSavings ? savings(prices[1], price, duration) : null;
-        const href = whatsappLink(phone, planMessage(plan.title, duration));
+        const href = whatsappLink(phone, planMessage(plan.title, duration, displayedPrice));
         return (
           <li key={duration}>
             <a className="plan-term" href={href ?? "#contact"} target={href ? "_blank" : undefined} rel={href ? "noopener noreferrer" : undefined}>
@@ -31,7 +32,7 @@ function PlanRates({ plan, prices, phone }: {
                 {duration === 6 && bestValue ? <span className="plan-value">Best value</span> : null}
               </span>
               <span className="plan-term-total">
-                <span className={isPrice(price) ? "plan-price" : "plan-savings"}>{isPrice(price) ? formatNaira(price) : "Enquire for pricing"}</span>
+                <span className={displayedPrice ? "plan-price" : "plan-savings"}>{displayedPrice ?? "Enquire for pricing"}</span>
                 <WhatsAppMark size={16} />
               </span>
             </a>

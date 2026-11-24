@@ -9,7 +9,7 @@ test("WhatsApp rejects missing and malformed numbers", () => {
   }
 });
 
-test("WhatsApp links encode general and duration-specific messages", () => {
+test("WhatsApp links encode the selected plan, duration, and displayed price", () => {
   // Reserved 555 number used only to exercise URL generation.
   const number = "+1 (202) 555-0142";
   const general = new URL(whatsappLink(number)!);
@@ -17,14 +17,16 @@ test("WhatsApp links encode general and duration-specific messages", () => {
   assert.equal(general.pathname, "/12025550142");
   assert.equal(general.searchParams.get("text"), generalMessage);
 
-  for (const plan of ["Basic", "Standard", "VIP"]) {
+  for (const plan of ["Basic", "Standard"]) {
     for (const duration of [1, 3, 6] as const) {
-      const message = planMessage(plan, duration);
+      const price = formatNaira(24000 * duration);
+      const message = planMessage(plan, duration, price);
       const link = new URL(whatsappLink(number, message)!);
       assert.equal(link.searchParams.get("text"), message);
-      assert.ok(message.includes(`${plan} coaching plan for ${durationLabel(duration)}`));
+      assert.ok(message.includes(`${plan} coaching plan for ${durationLabel(duration)} at ${price}.`));
     }
   }
+  assert.equal(planMessage("Basic", 6, null), "Hello Coach Fonsi, I’m interested in the Basic coaching plan for 6 months. How do I get started?");
 });
 
 test("sale offers and savings require positive configured prices", () => {

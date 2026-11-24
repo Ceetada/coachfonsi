@@ -23,7 +23,7 @@ export const site = {
     headline: "Let’s plan your first month.",
     description: "Tell me what you want to change, what you’ve tried, and how much time you have to train. We’ll talk through which coaching plan fits.",
   },
-  whatsappNumber: null as string | null,
+  whatsappNumber: "+2348124897796" as string | null,
   email: null as string | null,
   social: [
     { label: "Instagram", url: null },

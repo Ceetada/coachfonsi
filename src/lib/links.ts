@@ -7,8 +7,10 @@ export function durationLabel(months: Duration) {
   return months === 1 ? "1 month" : `${months} months`;
 }
 
-export function planMessage(plan: string, months: Duration) {
-  return `Hello Coach Fonsi, I’m interested in the ${plan} coaching plan for ${durationLabel(months)}. I’d like to know more.`;
+export function planMessage(plan: string, months: Duration, displayedPrice: string | null) {
+  const selection = `the ${plan} coaching plan for ${durationLabel(months)}`;
+  const offer = displayedPrice ? `${selection} at ${displayedPrice}` : selection;
+  return `Hello Coach Fonsi, I’m interested in ${offer}. How do I get started?`;
 }
 
 export function whatsappLink(phone: string | null, message = generalMessage) {
