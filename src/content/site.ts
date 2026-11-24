@@ -26,8 +26,8 @@ export const site = {
   whatsappNumber: "+2348124897796" as string | null,
   email: null as string | null,
   social: [
-    { label: "Instagram", url: null },
-    { label: "TikTok", url: null },
+    { label: "Instagram", url: "https://www.instagram.com/uyai__bassey/" },
+    { label: "TikTok", url: "https://www.tiktok.com/@livingwithfonsi" },
     { label: "YouTube", url: null },
   ] as Social[],
   seo: {
