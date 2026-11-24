@@ -46,7 +46,11 @@ export const media: {
     poster: "/media/coach/fonsi-hero-poster.webp",
     position: "50% 68%",
   },
-  aboutPortrait: null,
+  aboutPortrait: {
+    src: "/media/coach/fonsi-about.webp",
+    alt: "Sifon Etim seated outdoors in a red dress",
+    position: "50% 92%",
+  },
   beforePortrait: {
     src: "/media/coach/fonsi-journey-before.webp",
     alt: "Coach Fonsi in a red shirt holding a cup indoors",
