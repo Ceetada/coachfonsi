@@ -9,11 +9,11 @@ export const site = {
     description: "I’ll help you build strength and work toward your weight-loss goal with workouts that fit your week and nutrition changes built around the meals you already enjoy.",
   },
   about: {
-    heading: "Meet Coach Fonsi",
-    lead: "A fitness plan you can follow on a busy week.",
+    heading: "When the work doesn’t show.",
+    lead: "If you’ve been putting in the effort and still wonder whether it’s working, I get it.",
     paragraphs: [
-      "We’ll start with your experience, schedule, and the equipment you can use. Then we’ll build a strength-training routine you can return to each week.",
-      "For nutrition, we’ll start with what you already eat and look for changes you can repeat. The goal is to make your everyday decisions easier, from what to eat to when to train.",
+      "I’ll build your workouts around the time and equipment you actually have. With food, we’ll start with the meals you already enjoy and find changes you can stick with on a busy week.",
+      "We’ll look for progress you can feel, too. Maybe it’s lifting a little heavier or getting through a workout that used to wipe you out. Those wins count.",
     ],
     // Replace with approved biographical copy when supplied.
     biography: null as string | null,
