@@ -25,12 +25,11 @@ export const metadata: Metadata = {
   robots: { index: canIndex, follow: canIndex },
   icons: {
     icon: [
-      { url: "/brand/favicon.ico", sizes: "any" },
-      { url: "/brand/icon-16.png", sizes: "16x16", type: "image/png" },
-      { url: "/brand/icon-32.png", sizes: "32x32", type: "image/png" },
-      { url: "/brand/favicon.svg", sizes: "any", type: "image/svg+xml" },
+      { url: "/brand/favicon.ico?v=fonsi-avatar", sizes: "any" },
+      { url: "/brand/icon-16.png?v=fonsi-avatar", sizes: "16x16", type: "image/png" },
+      { url: "/brand/icon-32.png?v=fonsi-avatar", sizes: "32x32", type: "image/png" },
     ],
-    apple: [{ url: "/brand/apple-touch-icon.png", sizes: "180x180" }],
+    apple: [{ url: "/brand/apple-touch-icon.png?v=fonsi-avatar", sizes: "180x180" }],
   },
 };
 
