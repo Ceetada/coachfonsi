@@ -9,11 +9,11 @@ export const site = {
     description: "I’ll help you build strength and work toward your weight-loss goal with workouts that fit your week and nutrition changes built around the meals you already enjoy.",
   },
   about: {
-    heading: "When the work doesn’t show.",
-    lead: "Putting in the work and still feeling stuck? I get it.",
+    heading: "Tired of starting over?",
+    lead: "I know what it feels like to struggle with your weight.",
     paragraphs: [
-      "It’s exhausting to feel like you have to start over every time life gets busy.",
-      "I’ll take the guesswork off your plate with workouts you have time for and simple changes to the meals you already enjoy.",
+      "I kept starting and stopping until I no longer felt comfortable in my body. Two years ago, I decided to change that and prioritise myself.",
+      "Now, I help women skip the guesswork, enjoy the foods they love and build healthier, more confident bodies without extreme diets.",
     ],
     // Replace with approved biographical copy when supplied.
     biography: null as string | null,
