@@ -12,8 +12,8 @@ export const site = {
     heading: "When the work doesn’t show.",
     lead: "Putting in the work and still feeling stuck? I get it.",
     paragraphs: [
-      "I’ll build workouts around your schedule and equipment, with nutrition changes that fit the meals you already enjoy.",
-      "We’ll look for progress you can feel, like lifting a little heavier or finishing a workout that used to wipe you out.",
+      "It’s exhausting to feel like you have to start over every time life gets busy.",
+      "I’ll take the guesswork off your plate with workouts you have time for and simple changes to the meals you already enjoy.",
     ],
     // Replace with approved biographical copy when supplied.
     biography: null as string | null,
