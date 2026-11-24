@@ -20,15 +20,15 @@ export function Footer({ chat, email }: { chat: string | null; email: string | n
             <nav className="footer-links" aria-label="Explore Coach Fonsi">
               {navigation.map(({ label, href }) => <a key={href} href={href}>{label}</a>)}
             </nav>
-            {socials.length > 0 ? (
-              <nav className="footer-links" aria-label="Social media">
-                {socials.map(({ label, href }) => <a key={label} href={href} target="_blank" rel="noopener noreferrer">{label}<ArrowUpRight size={14} aria-hidden="true" /></a>)}
-              </nav>
-            ) : null}
             <div className="footer-contact">
               <ContactLink href={chat} className="footer-cta">
                 {chat ? "Chat on WhatsApp" : "Get in touch"}
               </ContactLink>
+              {socials.length > 0 ? (
+                <nav className="footer-links" aria-label="Social media">
+                  {socials.map(({ label, href }) => <a key={label} href={href} target="_blank" rel="noopener noreferrer">{label}<ArrowUpRight size={14} aria-hidden="true" /></a>)}
+                </nav>
+              ) : null}
               {email ? <a href={email}>Email</a> : null}
             </div>
           </div>
