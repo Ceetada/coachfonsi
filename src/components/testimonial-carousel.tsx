@@ -81,13 +81,29 @@ export function TestimonialCarousel({ items }: { items: Testimonial[] }) {
   }
 
   if (!items.length) return null;
+  const itemName = items.every((item) => item.example) ? "example chat" : "testimonial";
 
   return (
-    <div className="testimonial-carousel" role="region" aria-roledescription="carousel" aria-label="Client testimonials" onKeyDown={onKeyboard}>
-      <div className="carousel-track" ref={track} onScroll={onScroll} onPointerDown={releaseScroll} onWheel={releaseScroll} tabIndex={0} aria-label="Swipeable testimonial gallery">
+    <div className="testimonial-carousel" role="region" aria-roledescription="carousel" aria-label={`Coaching ${itemName}s`} onKeyDown={onKeyboard}>
+      <div className="carousel-track" ref={track} onScroll={onScroll} onPointerDown={releaseScroll} onWheel={releaseScroll} tabIndex={0} aria-label={`Swipeable ${itemName} gallery`}>
         {items.map((item, index) => (
-          <figure key={item.id} className="testimonial-slide" data-active={index === active} aria-label={`Testimonial ${index + 1} of ${items.length}`}>
-            {item.screenshot ? (
+          <figure key={item.id} className="testimonial-slide" data-active={index === active} aria-label={`${itemName} ${index + 1} of ${items.length}`}>
+            {item.example ? (
+              <div className="example-chat">
+                <header>
+                  <h3>{item.example.topic}</h3>
+                  <p>Example chat</p>
+                </header>
+                <ol className="example-chat-messages">
+                  {item.example.messages.map(({ from, text }, messageIndex) => (
+                    <li key={messageIndex} className={from === "coach" ? "example-chat-reply" : undefined}>
+                      <span className="sr-only">{from === "coach" ? "Coach Fonsi: " : "Member: "}</span>{text}
+                    </li>
+                  ))}
+                </ol>
+                {item.example.showResults ? <a className="text-link example-chat-results" href="#results">See real before-and-after results <ArrowRight size={14} aria-hidden="true" /></a> : null}
+              </div>
+            ) : item.screenshot ? (
               <button type="button" className="testimonial-trigger" aria-label={`Enlarge ${item.clientLabel ?? `testimonial ${index + 1}`}`} onClick={(event) => {
                 opener.current = event.currentTarget;
                 setOpened(item);
@@ -104,17 +120,17 @@ export function TestimonialCarousel({ items }: { items: Testimonial[] }) {
         ))}
       </div>
       <div className="carousel-controls">
-        <div className="pagination" aria-label="Choose testimonial">
+        <div className="pagination" aria-label={`Choose ${itemName}`}>
           {items.map((item, index) => (
-            <button key={item.id} type="button" aria-label={`Go to testimonial ${index + 1}`} aria-current={active === index ? "true" : undefined} onClick={() => select(index)}><span /></button>
+            <button key={item.id} type="button" aria-label={`Go to ${itemName} ${index + 1}`} aria-current={active === index ? "true" : undefined} onClick={() => select(index)}><span /></button>
           ))}
         </div>
         <div className="carousel-actions">
-          <button className="icon-button" type="button" aria-label="Previous testimonial" disabled={active === 0} onClick={() => select(active - 1)}><ArrowLeft aria-hidden="true" /></button>
-          <button className="icon-button" type="button" aria-label="Next testimonial" disabled={active === items.length - 1} onClick={() => select(active + 1)}><ArrowRight aria-hidden="true" /></button>
+          <button className="icon-button" type="button" aria-label={`Previous ${itemName}`} disabled={active === 0} onClick={() => select(active - 1)}><ArrowLeft aria-hidden="true" /></button>
+          <button className="icon-button" type="button" aria-label={`Next ${itemName}`} disabled={active === items.length - 1} onClick={() => select(active + 1)}><ArrowRight aria-hidden="true" /></button>
         </div>
       </div>
-      <span className="sr-only" role="status">Testimonial {active + 1} of {items.length}</span>
+      <span className="sr-only" role="status">{itemName} {active + 1} of {items.length}</span>
       <dialog className="lightbox" ref={dialog} aria-label="Enlarged testimonial" onKeyDown={(event) => event.stopPropagation()} onClick={(event) => {
         if (event.target === event.currentTarget) dialog.current?.close();
       }} onClose={() => {

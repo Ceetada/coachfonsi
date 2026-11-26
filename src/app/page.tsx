@@ -43,11 +43,11 @@ export default function Home() {
         <CoachIntroduction />
         <PersonalTransformation />
         <ClientResults />
-        <section className="section testimonial-field" aria-labelledby="testimonials-title">
+        <section className="section testimonial-field" id="check-ins" aria-labelledby="testimonials-title">
           <div className="wrap">
             <div className="section-header" data-reveal="text">
-              <h2 id="testimonials-title">Words From My Clients</h2>
-              <p className="lede">Real experiences. Shared with permission.</p>
+              <h2 id="testimonials-title">Inside a Coaching Check-in</h2>
+              <p className="lede">Illustrative chats about food, workouts, and getting back on track.</p>
             </div>
             <TestimonialCarousel items={testimonials} />
           </div>
